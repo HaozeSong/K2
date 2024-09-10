@@ -20,15 +20,15 @@ class HostNode:
 
 
 host_nodes: List[HostNode] = [
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [0,1], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [2,3], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [4], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [5], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [6], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [7], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [8], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [9], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [10], "mlx5_0", "A"),
-    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [11], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [0,1], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [2,3], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [4], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [5], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [6], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [7], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [8], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [9], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com", "172.31.11.30", [10], "mlx5_0", "A"),
+    HostNode("ec2-44-243-187-38.us-west-2.compute.amazonaws.com:", "172.31.11.30", [11], "mlx5_0", "A"),
     ]
 port_bases: Dict[str, int] = {"cpo": 7000, "tso": 8000, "persist": 4000, "nodepool": 10000}
