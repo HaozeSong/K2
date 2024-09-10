@@ -120,7 +120,9 @@ class Assignment:
         self.replace_program_arg(assigned.runnable, "$cpo_endpoints", cpo_endpoints)
 
     def fill_nodepool_endpoints(self, assigned: AssignedNode):
-        endpoints = self.get_component_endpoints("nodepool")
+        nodepool_endpoints = self.get_component_endpoints("nodepool")
+        if self.use_rdma:
+            nodepool_endpoints = nodepool_endpoints.replace("tcp+k2rpc", "auto-rrdma+k2rpc")
         self.replace_program_arg(assigned.runnable, "$nodepool_endpoints", endpoints)
 
     def fill_netserver_endpoints(self, assigned: AssignedNode):
@@ -191,17 +193,16 @@ class Assignment:
         if assigned is None:
             raise RuntimeError(f"No free hosts for {runnable}")
 
-        # Second check for cluster prerequisites (e.g. CPO must be parsed before nodepool)
         can_assign = False
         if runnable.component == "netserver" or runnable.component == "netclient":
             can_assign = True
         if runnable.component == "rpcserver" or runnable.component == "rpcclient":
             can_assign = True
-        # CPO, TSO, and persist are standalone with no prerequisites
-        elif runnable.component == "cpo" or runnable.component == "tso" or runnable.component == "persist":
+        # nodepool, TSO, and persist are standalone with no prerequisites
+        elif runnable.component == "nodepool" or runnable.component == "tso" or runnable.component == "persist":
             can_assign = True
-        elif runnable.component == "nodepool":
-            can_assign = self.check_assigned("cpo") and self.check_assigned("tso") and self.check_assigned("persist")
+        elif runnable.component == "cpo":
+            can_assign = self.check_assigned("nodepool") and self.check_assigned("tso") and self.check_assigned("persist)
         else:
             can_assign = self.check_assigned("nodepool")
         if not can_assign:
