@@ -123,7 +123,7 @@ class Assignment:
         nodepool_endpoints = self.get_component_endpoints("nodepool")
         if self.use_rdma:
             nodepool_endpoints = nodepool_endpoints.replace("tcp+k2rpc", "auto-rrdma+k2rpc")
-        self.replace_program_arg(assigned.runnable, "$nodepool_endpoints", endpoints)
+        self.replace_program_arg(assigned.runnable, "$nodepool_endpoints", nodepool_endpoints)
 
     def fill_netserver_endpoints(self, assigned: AssignedNode):
         endpoints = self.get_component_endpoints("netserver")
@@ -202,7 +202,7 @@ class Assignment:
         elif runnable.component == "nodepool" or runnable.component == "tso" or runnable.component == "persist":
             can_assign = True
         elif runnable.component == "cpo":
-            can_assign = self.check_assigned("nodepool") and self.check_assigned("tso") and self.check_assigned("persist)
+            can_assign = self.check_assigned("nodepool") and self.check_assigned("tso") and self.check_assigned("persist")
         else:
             can_assign = self.check_assigned("nodepool")
         if not can_assign:
