@@ -74,7 +74,8 @@ def parseRunnableConfig(runnable, config_files, cpus):
     for filename in config_files.split(' '):
         config = configparser.ConfigParser(interpolation=configparser.ExtendedInterpolation())
         config.read([filename])
-
+        #print(filename)
+        #print(config.sections())
         if "binary" in config["deployment"]:
             binary = config["deployment"]["binary"]
         if "image" in config["deployment"]:

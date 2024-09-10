@@ -20,15 +20,15 @@ class HostNode:
 
 
 host_nodes: List[HostNode] = [
-    HostNode("server-1.mydomain.com", "192.168.1.2", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-2.mydomain.com", "192.168.1.4", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-3.mydomain.com", "192.168.1.6", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-4.mydomain.com", "192.168.1.8", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-5.mydomain.com", "192.168.1.10", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-6.mydomain.com", "192.168.1.12", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-7.mydomain.com", "192.168.1.14", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-8.mydomain.com", "192.168.1.16", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-9.mydomain.com", "192.168.1.18", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A"),
-    HostNode("server-10.mydomain.com", "192.168.1.20", [10, 11, 12, 13, 14, 15, 16, 17, 18, 19], "mlx5_0", "A")]
-
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [0], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [1], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [2], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [3], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [4], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [5], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [6], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [7], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [8], "mlx5_0", "A"),
+    HostNode("ec2-52-36-150-160.us-west-2.compute.amazonaws.com", "172.31.11.30", [9], "mlx5_0", "A"),
+    ]
 port_bases: Dict[str, int] = {"cpo": 7000, "tso": 8000, "persist": 4000, "nodepool": 10000}
