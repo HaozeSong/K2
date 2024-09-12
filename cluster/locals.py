@@ -20,14 +20,10 @@ class HostNode:
 
 
 host_nodes: List[HostNode] = [
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [0,1], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [2,3], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [4,5], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [6,7], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [8,9], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [10], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [11], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [12], "mlx5_0", "A"),
-    HostNode("ec2-54-202-94-0.us-west-2.compute.amazonaws.com", "172.31.11.30", [13], "mlx5_0", "A"),
+    HostNode("ec2-35-84-195-137.us-west-2.compute.amazonaws.com", "172.31.58.29", [0,1,2,3], "mlx5_0", "A"),
+    HostNode("ec2-35-84-195-137.us-west-2.compute.amazonaws.com", "172.31.58.29", [4,5], "mlx5_0", "A"),
+    HostNode("ec2-35-84-195-137.us-west-2.compute.amazonaws.com", "172.31.58.29", [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25], "mlx5_0", "A"),
+    HostNode("ec2-35-84-195-137.us-west-2.compute.amazonaws.com", "172.31.58.29", [26], "mlx5_0", "A"),
+    HostNode("ec2-35-84-195-137.us-west-2.compute.amazonaws.com", "172.31.58.29", [27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46], "mlx5_0", "A"),
     ]
 port_bases: Dict[str, int] = {"cpo": 7000, "tso": 8000, "persist": 4000, "nodepool": 10000}
